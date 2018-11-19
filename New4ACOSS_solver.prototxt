@@ -1,0 +1,33 @@
+test_iter: 100
+test_interval: 1000
+# base_lr: 0.00002
+# lr_policy: "multistep"
+# stepvalue: 13000
+# stepvalue: 26000
+# stepvalue: 39000
+# stepvalue: 52000
+# gamma: 0.5
+
+ base_lr: 0.005
+ lr_policy: "inv"
+ gamma: 0.0001
+ power: 0.75
+
+display: 500
+max_iter: 60000
+
+
+momentum: 0.9
+weight_decay: 0.0001
+snapshot: 10000
+solver_mode: GPU
+#snapshot_prefix: "examples/fusion2-cls2/2_branch/snapshot/16_New4ACOSS"
+#snapshot_prefix: "examples/fusion2-cls2/2_branch/snapshot/12_New4ACOSS"
+#snapshot_prefix: "examples/fusion2-cls2/2_branch/snapshot/24_New4ACOSS"
+snapshot_prefix: "examples/fusion2-cls2/2_branch/snapshot/all_New4ACOSS"
+
+net: "examples/fusion2-cls2/2_branch/New4ACOSS.prototxt"
+
+test_initialization: true
+
+type: "Nesterov"
